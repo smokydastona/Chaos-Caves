@@ -2,6 +2,11 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.5] - 2025-11-27
+### Added
+- Documentation for biome mod compatibility (Biomes O' Plenty, Terralith)
+- Documentation for structure spawning mechanism
+
 ## [1.0.4] - 2025-11-27
 ### Fixed
 - Set Gradle version to 8.1.1 (ForgeGradle doesn't support Gradle 9.x yet)
