@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.6] - 2025-11-27
+### Fixed
+- Added missing pack.mcmeta to fix "invalid resource pack" error
+
 ## [1.0.5] - 2025-11-27
 ### Added
 - Documentation for biome mod compatibility (Biomes O' Plenty, Terralith)
