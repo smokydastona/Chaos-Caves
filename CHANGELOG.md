@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.9] - 2025-11-27
+### Fixed
+- Added proper pack.mcmeta with Forge-specific format tags to eliminate resource pack warnings
+
 ## [1.0.8] - 2025-11-27
 ### Fixed
 - Removed pack.mcmeta causing invalid datapack detection blocking world creation
