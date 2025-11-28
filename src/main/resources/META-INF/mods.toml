@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="chaoscaves"
+version="1.0.0"
+displayName="Chaos Caves"
+description='''
+Creates a cave-only overworld with bedrock ceiling where all biomes spawn as cave versions.
+Structures and features spawn properly at cave floor level.
+'''
+
+[[dependencies.chaoscaves]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.chaoscaves]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
