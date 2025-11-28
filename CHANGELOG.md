@@ -2,6 +2,12 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.17] - 2025-11-27
+### Added
+- Minimal self-contained noise_settings using only numeric values
+- Simple y_clamped_gradient for terrain base
+- final_density directly uses cave_density (no complex operations)
+
 ## [1.0.16] - 2025-11-27
 ### Changed
 - Removed noise_settings override entirely - using vanilla/modded noise settings
