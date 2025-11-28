@@ -9,10 +9,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod("chaoscaves")
 public class ChaosCavesMod {
     public static final String MODID = "chaoscaves";
+    public static final Logger LOGGER = LogManager.getLogger();
     
     private static final DeferredRegister<DensityFunction> DENSITY_FUNCTIONS = 
         DeferredRegister.create(Registries.DENSITY_FUNCTION, MODID);
@@ -20,6 +23,9 @@ public class ChaosCavesMod {
     public ChaosCavesMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         DENSITY_FUNCTIONS.register(modEventBus);
+        
+        Config.register();
+        LOGGER.info("Chaos Caves config registered");
     }
 
     public static ResourceLocation id(String path) {
