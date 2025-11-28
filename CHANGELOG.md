@@ -2,6 +2,12 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.14] - 2025-11-27
+### Fixed
+- Restored vanilla noise router references (temperature, vegetation, erosion, etc.)
+- Changed final_density to ADD cave_density to vanilla terrain instead of replacing it
+- Using vanilla surface_rule reference for proper biome-specific blocks
+
 ## [1.0.13] - 2025-11-27
 ### Added
 - Biome-specific surface blocks (grass, sand, dirt, etc.)
