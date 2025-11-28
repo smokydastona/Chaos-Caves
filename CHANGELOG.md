@@ -2,6 +2,12 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [2.0.2] - 2025-11-27
+### Fixed
+- Added proper biome noise parameters (temperature, vegetation, continents, erosion, ridges)
+- All biomes now generate correctly instead of only river biome
+- Uses vanilla noise references for proper biome distribution
+
 ## [2.0.1] - 2025-11-27
 ### Changed
 - Override overworld dimension instead of creating separate dimension
