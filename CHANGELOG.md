@@ -2,6 +2,13 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.7] - 2025-11-27
+### Added
+- Configuration file support (chaoscaves-server.toml)
+- Configurable cave floor/ceiling heights
+- Configurable aquifer toggle
+- Configurable dimension settings (ceiling, skylight, ambient light)
+
 ## [1.0.6] - 2025-11-27
 ### Fixed
 - Added missing pack.mcmeta to fix "invalid resource pack" error

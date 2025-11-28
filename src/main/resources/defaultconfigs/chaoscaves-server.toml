@@ -1,0 +1,27 @@
+# Chaos Caves Server Configuration
+# This file will be copied to your world's serverconfig folder on first launch
+
+[cave_generation]
+	# Y-level where cave floor gradient starts (solid below this)
+	# Range: -64 ~ 320
+	cave_floor_start = -64
+	# Y-level where cave floor gradient ends (caves above this)
+	# Range: -64 ~ 320
+	cave_floor_end = -40
+	# Y-level where cave ceiling gradient starts (caves below this)
+	# Range: -64 ~ 320
+	cave_ceiling_start = 280
+	# Y-level where cave ceiling gradient ends (solid above this)
+	# Range: -64 ~ 320
+	cave_ceiling_end = 310
+	# Enable underground water aquifers (may impact performance)
+	enable_aquifers = false
+
+[dimension]
+	# Enable bedrock ceiling at world height
+	has_ceiling = true
+	# Enable skylight (false = always dark like Nether)
+	has_skylight = false
+	# Ambient light level (0.0 = pitch black, 1.0 = full bright)
+	# Range: 0.0 ~ 1.0
+	ambient_light = 0.1
