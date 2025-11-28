@@ -2,6 +2,12 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.16] - 2025-11-27
+### Changed
+- Removed noise_settings override entirely - using vanilla/modded noise settings
+- Keeping only custom cave_density function for terrain modification
+- This allows full compatibility with BOP, Terralith, and other worldgen mods
+
 ## [1.0.15] - 2025-11-27
 ### Fixed
 - Replaced vanilla noise router references with inline definitions (fixes mod loading)
