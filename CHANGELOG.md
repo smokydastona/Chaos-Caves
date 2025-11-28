@@ -2,6 +2,16 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [2.0.3] - 2025-11-27
+### Fixed
+- Removed vanilla noise references causing registry crash
+- Reverted to constant noise router (biomes determined by dimension's biome source)
+- Fixed "Failed to load registries" error
+
+### Technical Note
+Biome distribution now relies on the dimension's multi_noise biome source with overworld preset.
+The noise_router uses constants since vanilla noise files don't exist in mod context.
+
 ## [2.0.2] - 2025-11-27
 ### Fixed
 - Added proper biome noise parameters (temperature, vegetation, continents, erosion, ridges)
