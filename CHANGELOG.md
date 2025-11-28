@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.8] - 2025-11-27
+### Fixed
+- Removed pack.mcmeta causing invalid datapack detection blocking world creation
+
 ## [1.0.7] - 2025-11-27
 ### Added
 - Configuration file support (chaoscaves-server.toml)
