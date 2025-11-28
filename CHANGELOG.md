@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.12] - 2025-11-27
+### Fixed
+- Fixed unbound density function references in noise_router (replaced vanilla references with constants)
+
 ## [1.0.11] - 2025-11-27
 ### Fixed
 - Fixed critical typo: "beds_work" → "bed_works" in dimension_type (was causing registry loading crash)
