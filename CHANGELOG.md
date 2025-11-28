@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.10] - 2025-11-27
+### Fixed
+- Simplified pack.mcmeta to match Biomes O' Plenty structure exactly
+
 ## [1.0.9] - 2025-11-27
 ### Fixed
 - Added proper pack.mcmeta with Forge-specific format tags to eliminate resource pack warnings

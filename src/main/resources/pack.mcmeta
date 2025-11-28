@@ -1,8 +1,6 @@
 {
   "pack": {
-    "description": "Chaos Caves world generation data",
-    "pack_format": 15,
-    "forge:resource_pack_format": 15,
-    "forge:data_pack_format": 15
+    "description": "Chaos Caves world generation",
+    "pack_format": 15
   }
 }
