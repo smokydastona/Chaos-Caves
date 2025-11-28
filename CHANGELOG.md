@@ -2,6 +2,17 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [2.1.0] - 2025-11-27
+### Changed
+- **MAJOR ARCHITECTURE CHANGE**: Removed all noise_settings overrides
+- Now uses vanilla overworld noise_settings (minecraft:overworld)
+- Terrain generation now requires runtime code injection (not pure JSON)
+
+### Technical Note
+JSON worldgen cannot reference vanilla noise files from mod context.
+This version uses vanilla terrain as placeholder.
+Future versions will use mixins or TerraBlender to inject chaotic terrain.
+
 ## [2.0.3] - 2025-11-27
 ### Fixed
 - Removed vanilla noise references causing registry crash

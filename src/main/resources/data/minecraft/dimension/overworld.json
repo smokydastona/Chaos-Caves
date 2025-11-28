@@ -6,6 +6,6 @@
       "type": "minecraft:multi_noise",
       "preset": "minecraft:overworld"
     },
-    "settings": "chaoscaves:cave_world"
+    "settings": "minecraft:overworld"
   }
 }
