@@ -2,6 +2,20 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [2.0.0] - 2025-11-27
+### Changed
+- **BREAKING**: Switched from overworld override to custom dimension
+- Creates `chaoscaves:cave_world` dimension sent via dimension packets
+- Works with vanilla clients (server-side only)
+- Uses all overworld biomes in cave world
+- Removed all minecraft namespace overrides
+
+### Technical
+- Custom dimension type with no skylight, has ceiling
+- Uses multi_noise biome source with overworld preset
+- Self-contained noise settings for chaotic cave generation
+- Server sends dimension definition to vanilla clients automatically
+
 ## [1.0.18] - 2025-11-27
 ### Fixed
 - Added missing preliminary_surface_level to noise_router
