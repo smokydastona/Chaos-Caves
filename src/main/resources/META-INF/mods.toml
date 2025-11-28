@@ -4,8 +4,15 @@ license="MIT"
 
 [[mods]]
 modId="chaoscaves"
-version="2.1.0"
+version="3.0.0"
 displayName="Chaos Caves"
+
+[[dependencies.chaoscaves]]
+modId="terrablender"
+mandatory=true
+versionRange="[3.0.0,)"
+ordering="AFTER"
+side="BOTH"
 description='''
 Creates a cave-only overworld with bedrock ceiling where all biomes spawn as cave versions.
 Structures and features spawn properly at cave floor level.

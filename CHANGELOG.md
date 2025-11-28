@@ -1,6 +1,12 @@
 # Changelog
 
-All notable changes to Chaos Caves will be documented in this file.
+## [3.0.0] - 2025-11-27
+### COMPLETE REWRITE - TerraBlender Integration
+- Uses TerraBlender API for proper terrain modification
+- All biomes work correctly (vanilla + modded)
+- Bedrock ceiling and floor via surface rules
+- Removed all JSON worldgen overrides
+- Server-side only (clients auto-download TerraBlender)
 
 ## [2.1.0] - 2025-11-27
 ### Changed
