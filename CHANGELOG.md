@@ -2,6 +2,13 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.15] - 2025-11-27
+### Fixed
+- Replaced vanilla noise router references with inline definitions (fixes mod loading)
+- cave_density now uses min() with vanilla terrain instead of add() for proper integration
+- Re-enabled aquifers
+- Simplified surface rules to grass+dirt on preliminary surface
+
 ## [1.0.14] - 2025-11-27
 ### Fixed
 - Restored vanilla noise router references (temperature, vegetation, erosion, etc.)
