@@ -1,0 +1,17 @@
+# Changelog
+
+All notable changes to Chaos Caves will be documented in this file.
+
+## [1.0.1] - 2025-11-27
+### Changed
+- Implemented version tracking system for organized releases
+
+## [1.0.0] - 2025-11-27
+### Added
+- Initial release
+- Cave-only overworld with bedrock ceiling at Y 315-320
+- Caves extend from Y -64 to Y 300
+- Compatible with all biome mods (Biomes O' Plenty, Terralith, etc.)
+- Optimized density functions for better performance than datapack
+- Server-side compatible
+- Structures and features spawn at cave floor level
