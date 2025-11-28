@@ -1,5 +1,5 @@
 {
-  "type": "chaoscaves:cave_world",
+  "type": "minecraft:overworld",
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {

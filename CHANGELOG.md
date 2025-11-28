@@ -2,6 +2,13 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [2.0.1] - 2025-11-27
+### Changed
+- Override overworld dimension instead of creating separate dimension
+- Players spawn directly into cave world (survival friendly)
+- Nether and End portals work normally
+- No commands needed - just join and play
+
 ## [2.0.0] - 2025-11-27
 ### Changed
 - **BREAKING**: Switched from overworld override to custom dimension
