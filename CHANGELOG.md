@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.4] - 2025-11-27
+### Fixed
+- Set Gradle version to 8.1.1 (ForgeGradle doesn't support Gradle 9.x yet)
+
 ## [1.0.3] - 2025-11-27
 ### Changed
 - Use Gradle setup action in GitHub Actions (no wrapper files needed)
