@@ -2,6 +2,15 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.13] - 2025-11-27
+### Added
+- Biome-specific surface blocks (grass, sand, dirt, etc.)
+- Restored vanilla biome features (trees, grass, flowers, structures)
+
+### Changed
+- Removed dimension_type override to allow normal sky and biome features
+- Enhanced surface_rule with biome-specific terrain (deserts=sand, badlands=red_sand, etc.)
+
 ## [1.0.12] - 2025-11-27
 ### Fixed
 - Fixed unbound density function references in noise_router (replaced vanilla references with constants)
