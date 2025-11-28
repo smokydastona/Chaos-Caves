@@ -2,6 +2,10 @@
 
 All notable changes to Chaos Caves will be documented in this file.
 
+## [1.0.18] - 2025-11-27
+### Fixed
+- Added missing preliminary_surface_level to noise_router
+
 ## [1.0.17] - 2025-11-27
 ### Added
 - Minimal self-contained noise_settings using only numeric values
