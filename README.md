@@ -1,34 +1,55 @@
-# Chaos Caves Mod
+# BoP Cave Compact Companion Mod
 
-A Forge mod for Minecraft 1.20.1 that creates a cave-only overworld with bedrock ceiling.
+A Forge server-side mod that enhances the BoP Cave Compact datapack with proper biome spawning and feature generation.
 
 ## Features
-- Bedrock ceiling at Y 315-320
-- All biomes spawn as cave versions
-- Caves extend from Y -64 to Y 300
-- Compatible with all biome mods (Biomes O' Plenty, etc.)
-- Structures and features spawn at cave floor level
-- Server-side compatible
+
+- **Server-side only** - vanilla clients can connect
+- Forces all features to spawn regardless of light/sky requirements  
+- Expands structure spawn height ranges for better cave generation
+- TerraBlender integration for enhanced worldgen compatibility
+- Configurable spawn rates and conditions
 
 ## Building
 
 Requirements:
 - Java JDK 17
-- Gradle (included via wrapper)
+- Gradle (wrapper included)
 
 To build:
-```
-gradlew build
+```bash
+./gradlew build
 ```
 
-The compiled mod will be in `build/libs/chaoscaves-1.0.0.jar`
+The compiled mod will be in `build/libs/bop-cave-compact-companion-1.1.0.jar`
 
 ## Installation
 
-1. Install Minecraft Forge 1.20.1
-2. Place the .jar file in your mods folder
-3. Launch Minecraft
+1. Build the mod using instructions above
+2. Place the `.jar` file in your server's `mods/` folder  
+3. Ensure TerraBlender is also installed
+4. Start server - config file will be auto-generated
+
+## Dependencies
+
+- Minecraft Forge 1.20.1+ (47.2.0+)
+- TerraBlender 3.0.1.4+
 
 ## Configuration
 
-No configuration needed - works out of the box!
+Config file: `world/serverconfig/bopcompanion-server.toml`
+
+Key settings:
+- `ignore_light_conditions = true` - Features spawn in dark caves
+- `ignore_sky_access = true` - Features don't need sky access  
+- `structure_height_min/max` - Y-level range for structures
+- `structure_spawn_multiplier` - Increase structure spawn rates
+
+## How It Works
+
+Uses mixins to override:
+- `BlockPredicateFilter` - Bypasses light/sky checks for feature placement
+- `Structure` - Expands height ranges for structure spawning
+- TerraBlender surface rules for proper cave terrain generation
+
+Compatible with all biome mods - BiomesOPlenty, Terralith, Oh The Biomes You'll Go, etc.

@@ -1,42 +1,28 @@
 plugins {
     id 'eclipse'
-    id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '3.0.0'
-group = 'com.chaoscaves'
-
-base {
-    archivesName = 'chaoscaves'
-}
+version = '1.1.0'
+group = 'com.bopcompanion'
+archivesBaseName = 'bop-cave-compact-companion'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
     mappings channel: 'official', version: '1.20.1'
 
     runs {
-        client {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                chaoscaves {
-                    source sourceSets.main
-                }
-            }
-        }
-
         server {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
+            args '--nogui'
             mods {
-                chaoscaves {
+                bopcompanion {
                     source sourceSets.main
                 }
             }
@@ -44,13 +30,55 @@ minecraft {
     }
 }
 
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
 repositories {
-    maven { url = "https://maven.parchmentmc.org" }
+    maven {
+        name = 'ParchmentMC'
+        url = 'https://maven.parchmentmc.org'
+    }
+    maven {
+        name = 'BlameJared'
+        url = 'https://maven.blamejared.com'
+    }
+    maven {
+        name = 'TerraBlender'
+        url = 'https://maven.terraformersmc.com/releases/'
+    }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
-    implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:1.20.1-3.0.1.7")
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
+    
+    // TerraBlender for world generation
+    implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:1.20.1-3.0.1.4")
+    
+    // Optional: BiomesOPlenty integration (if present)
+    compileOnly fg.deobf("biomesoplenty:BiomesOPlenty:1.20.1-18.0.0.592")
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title"     : "BoP Cave Compact Companion",
+            "Specification-Vendor"    : "BoPCompanion",
+            "Specification-Version"   : "1",
+            "Implementation-Title"    : project.name,
+            "Implementation-Version"  : project.jar.archiveVersion,
+            "Implementation-Vendor"   : "BoPCompanion",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact jar
+        }
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {

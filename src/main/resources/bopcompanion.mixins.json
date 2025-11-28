@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.bopcompanion.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "bopcompanion.refmap.json",
+  "mixins": [
+    "BlockPredicateFilterMixin",
+    "StructureSpawningMixin"
+  ],
+  "server": [
+    "BlockPredicateFilterMixin",
+    "StructureSpawningMixin"
+  ],
+  "minVersion": "0.8"
+}

@@ -3,31 +3,35 @@ loaderVersion="[47,)"
 license="MIT"
 
 [[mods]]
-modId="chaoscaves"
-version="3.0.0"
-displayName="Chaos Caves"
+modId="bopcompanion"
+version="${file.jarVersion}"
+displayName="BoP Cave Compact Companion"
+description='''
+Server-side companion mod for BoP Cave Compact datapack.
+Enhances biome spawning, removes light/sky restrictions, and expands structure spawn ranges in cave worlds.
+Compatible with BiomesOPlenty and all biome mods.
+'''
+logoFile="logo.png"
+credits="Based on Chaos Caves architecture"
+authors="AI Assistant"
 
-[[dependencies.chaoscaves]]
+[[dependencies.bopcompanion]]
+modId="forge"
+mandatory=true
+versionRange="[47.2.0,)"
+ordering="NONE"
+side="SERVER"
+
+[[dependencies.bopcompanion]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.bopcompanion]]
 modId="terrablender"
 mandatory=true
-versionRange="[3.0.0,)"
+versionRange="[3.0.1.4,)"
 ordering="AFTER"
-side="BOTH"
-description='''
-Creates a cave-only overworld with bedrock ceiling where all biomes spawn as cave versions.
-Structures and features spawn properly at cave floor level.
-'''
-
-[[dependencies.chaoscaves]]
-    modId="forge"
-    mandatory=true
-    versionRange="[47,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.chaoscaves]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1,1.21)"
-    ordering="NONE"
-    side="BOTH"
+side="SERVER"

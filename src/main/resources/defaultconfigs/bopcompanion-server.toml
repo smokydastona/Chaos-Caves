@@ -1,0 +1,27 @@
+# BoP Cave Compact Companion Server Configuration
+# This file will be copied to your world's serverconfig folder on first launch
+
+[biome_enhancement]
+	# Enable enhanced biome spawning to ensure all biomes work in cave world
+	enhance_biome_spawning = true
+
+[feature_spawning]
+	# Force all features to spawn regardless of light level requirements
+	ignore_light_conditions = true
+	# Force all features to spawn regardless of sky access requirements
+	ignore_sky_access = true
+	# Force vanilla features (trees, grass, flowers) to spawn in caves
+	force_vanilla_features = true
+	# Force modded features (BoP vegetation, etc.) to spawn in caves
+	force_mod_features = true
+
+[structure_spawning]
+	# Minimum Y-level for structure spawning (-64 to 320)
+	# Range: -64 ~ 320
+	structure_height_min = -60
+	# Maximum Y-level for structure spawning (-64 to 320)
+	# Range: -64 ~ 320
+	structure_height_max = 300
+	# Structure spawn rate multiplier (1.0 = normal, 2.0 = double spawns)
+	# Range: 0.1 ~ 5.0
+	structure_spawn_multiplier = 1.5
