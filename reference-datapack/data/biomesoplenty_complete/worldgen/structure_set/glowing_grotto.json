@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "biomesoplenty_complete:glowing_grotto",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 0,
+    "exclusion_zone": {
+      "other_set": "biomesoplenty_complete:cave_blocker",
+      "chunk_count": 10
+    },
+    "spacing": 8,
+    "separation": 4
+  }
+}

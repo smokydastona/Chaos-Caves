@@ -1,0 +1,94 @@
+{
+  "feature": {
+    "type": "minecraft:block_column",
+    "config": {
+      "direction": "up",
+      "allowed_placement": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "blocks": [
+          "minecraft:soul_sand",
+          "minecraft:cave_air"
+        ]
+      },
+      "prioritize_tip": false,
+      "layers": [
+        {
+          "height": 1,
+          "provider": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:soul_sand"
+            }
+          }
+        },
+        {
+          "height": 1,
+          "provider": {
+            "type": "minecraft:randomized_int_state_provider",
+            "property": "age",
+            "values": {
+              "type": "minecraft:uniform",
+              "value": {
+                "min_inclusive": 0,
+                "max_inclusive": 3
+              }
+            },
+            "source": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:nether_wart"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:carving_mask",
+      "step": "air"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:soul_sand",
+          "minecraft:netherrack"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "blocks": "minecraft:cave_air"
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -1
+    }
+  ]
+}

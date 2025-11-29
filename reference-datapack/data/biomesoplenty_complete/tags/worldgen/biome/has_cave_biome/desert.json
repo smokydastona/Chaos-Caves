@@ -1,0 +1,14 @@
+{
+  "values": [
+    "biomesoplenty:lush_desert",
+    "biomesoplenty:cold_desert",
+    "biomesoplenty:scrubland",
+    "biomesoplenty:dryland",
+    "biomesoplenty:wasteland",
+    "biomesoplenty:wasteland_steppe",
+    "minecraft:desert",
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands"
+  ]
+}

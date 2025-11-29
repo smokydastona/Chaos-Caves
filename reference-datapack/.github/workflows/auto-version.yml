@@ -1,0 +1,228 @@
+name: Auto Version & Release
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/**'
+      - 'pack.mcmeta'
+      - '!**.md'
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  version-and-release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-version]')"
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Get current version
+        id: current_version
+        run: |
+          if [ -f "VERSION" ]; then
+            CURRENT=$(cat VERSION)
+          else
+            CURRENT="1.0.0"
+            echo "1.0.0" > VERSION
+          fi
+          echo "version=$CURRENT" >> $GITHUB_OUTPUT
+          echo "Current version: $CURRENT"
+
+      - name: Determine version bump type
+        id: bump_type
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "type=${{ github.event.inputs.version_type }}" >> $GITHUB_OUTPUT
+          else
+            # Auto-determine based on commit message
+            if [[ "${{ github.event.head_commit.message }}" =~ \[major\] ]]; then
+              echo "type=major" >> $GITHUB_OUTPUT
+            elif [[ "${{ github.event.head_commit.message }}" =~ \[minor\] ]]; then
+              echo "type=minor" >> $GITHUB_OUTPUT
+            else
+              echo "type=patch" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Bump version
+        id: new_version
+        run: |
+          CURRENT="${{ steps.current_version.outputs.version }}"
+          BUMP_TYPE="${{ steps.bump_type.outputs.type }}"
+          
+          IFS='.' read -ra VERSION_PARTS <<< "$CURRENT"
+          MAJOR=${VERSION_PARTS[0]}
+          MINOR=${VERSION_PARTS[1]}
+          PATCH=${VERSION_PARTS[2]}
+          
+          case $BUMP_TYPE in
+            major)
+              MAJOR=$((MAJOR + 1))
+              MINOR=0
+              PATCH=0
+              ;;
+            minor)
+              MINOR=$((MINOR + 1))
+              PATCH=0
+              ;;
+            patch)
+              PATCH=$((PATCH + 1))
+              ;;
+          esac
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          echo "$NEW_VERSION" > VERSION
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "New version: $NEW_VERSION"
+
+      - name: Update pack.mcmeta with version
+        run: |
+          NEW_VERSION="${{ steps.new_version.outputs.version }}"
+          
+          # Create updated pack.mcmeta with version in description
+          cat > pack.mcmeta << EOF
+          {
+            "pack": {
+              "description": [
+                {
+                  "text": "BiomesOPlenty Complete World v$NEW_VERSION",
+                  "color": "#00FF88"
+                },
+                "\n",
+                {
+                  "text": "Surface & Underground Biomes",
+                  "color": "#AAAAAA"
+                },
+                "\n",
+                {
+                  "text": "Made by AI Assistant",
+                  "color": "#ffbbbb"
+                }
+              ],
+              "pack_format": 15,
+              "min_format": 15,
+              "max_format": 999,
+              "supported_formats": [15, 999]
+            },
+            "overlays": {
+              "entries": [
+                {
+                  "formats": [41, 999],
+                  "min_format": 41,
+                  "max_format": 999,
+                  "directory": "overlay_1_20_5"
+                },
+                {
+                  "formats": [61, 999],
+                  "min_format": 61,
+                  "max_format": 999,
+                  "directory": "overlay_1_21_4"
+                },
+                {
+                  "formats": [71, 999],
+                  "min_format": 71,
+                  "max_format": 999,
+                  "directory": "overlay_1_21_5"
+                },
+                {
+                  "formats": [88, 999],
+                  "min_format": 88,
+                  "max_format": 999,
+                  "directory": "overlay_1_21_9"
+                }
+              ]
+            }
+          }
+          EOF
+
+      - name: Commit version changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add VERSION pack.mcmeta
+          git commit -m "🔖 Bump version to ${{ steps.new_version.outputs.version }} [skip-version]" || exit 0
+
+      - name: Create and push tag
+        run: |
+          NEW_VERSION="${{ steps.new_version.outputs.version }}"
+          git tag -a "v$NEW_VERSION" -m "Version $NEW_VERSION"
+          git push origin main
+          git push origin "v$NEW_VERSION"
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.new_version.outputs.version }}
+          release_name: BiomesOPlenty Complete World v${{ steps.new_version.outputs.version }}
+          body: |
+            ## BiomesOPlenty Complete World v${{ steps.new_version.outputs.version }}
+            
+            ### Changes
+            - ${{ github.event.head_commit.message }}
+            
+            ### Installation
+            1. Download the datapack zip file
+            2. Place in your world's `datapacks/` folder
+            3. Run `/reload` in-game
+            
+            ### Minecraft Compatibility
+            - Base: 1.20.1+ (pack_format 15)
+            - 1.20.5+ supported via overlays
+            - 1.21.4+ (Pale Garden features)
+            - 1.21.5+ (Leaf litter features) 
+            - 1.21.9+ (Latest terrain generation)
+            
+            ### Features
+            - BiomesOPlenty surface biomes integration
+            - Better Cave Worlds underground terrain
+            - Custom underground cave biome structures
+            - Jigsaw-based structure generation
+          draft: false
+          prerelease: false
+
+      - name: Create release archive
+        run: |
+          # Create a clean copy for distribution
+          mkdir -p release
+          cp -r data pack.mcmeta overlay_* release/ 2>/dev/null || true
+          cd release
+          zip -r "../BiomesOPlenty-Complete-World-v${{ steps.new_version.outputs.version }}.zip" .
+          cd ..
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./BiomesOPlenty-Complete-World-v${{ steps.new_version.outputs.version }}.zip
+          asset_name: BiomesOPlenty-Complete-World-v${{ steps.new_version.outputs.version }}.zip
+          asset_content_type: application/zip

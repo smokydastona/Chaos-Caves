@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "biomesoplenty_complete:cave_blocker",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 362894334,
+    "frequency_reduction_method": "legacy_type_3",
+    "frequency": 0.5,
+    "spacing": 15,
+    "separation": 10
+  }
+}

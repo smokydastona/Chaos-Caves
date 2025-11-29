@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "biomesoplenty_complete:snowy_caves",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 5,
+    "exclusion_zone": {
+      "other_set": "biomesoplenty_complete:cave_blocker",
+      "chunk_count": 10
+    },
+    "spacing": 18,
+    "separation": 9
+  }
+}
