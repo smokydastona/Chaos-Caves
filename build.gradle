@@ -63,6 +63,18 @@ jar {
 
 jar.finalizedBy('reobfJar')
 
+task zipDatapack(type: Zip) {
+    archiveBaseName = 'fractured-lands-worldgen'
+    archiveVersion = project.version
+    destinationDirectory = file("$buildDir/libs")
+    
+    from('datapack') {
+        include '**/*'
+    }
+}
+
+build.dependsOn zipDatapack
+
 publishing {
     publications {
         maven(MavenPublication) {
