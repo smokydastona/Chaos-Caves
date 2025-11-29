@@ -1,0 +1,15 @@
+{
+  "name": "cavernous:overgrown_temple",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:overgrown_temple",
+        "projection": "rigid",
+        "processors": "cavernous:overgrown_temple"
+      }
+    }
+  ]
+}

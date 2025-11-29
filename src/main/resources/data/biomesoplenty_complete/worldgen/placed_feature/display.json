@@ -1,0 +1,29 @@
+{
+  "feature": {
+    "type": "minecraft:fill_layer",
+    "config": {
+      "state": {
+        "Name": "minecraft:lime_candle"
+      },
+      "height": 255
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "above_bottom": 0
+        },
+        "max_inclusive": {
+          "below_top": 0
+        }
+      }
+    }
+  ]
+}

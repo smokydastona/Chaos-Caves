@@ -1,0 +1,33 @@
+{
+  "name": "cavernous:citadel",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/statues/gaurd",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/statues/skull",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/statues/sword",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "cavernous:citadel",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/church",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/lab",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/pedestal",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/ruined",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/storage",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/altar",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/chainworker",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:citadel/buildings/big",
+        "projection": "rigid",
+        "processors": "cavernous:citadel_gate"
+      }
+    }
+  ]
+}

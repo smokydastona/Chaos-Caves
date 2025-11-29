@@ -1,0 +1,20 @@
+{
+  "feature": {
+    "type": "minecraft:random_patch",
+    "config": {
+      "tries": 5,
+      "xz_spread": 8,
+      "y_spread": 8,
+      "feature": {
+        "feature": "biomesoplenty_complete:quartz_canyons/quartz_crystal",
+        "placement": []
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:carving_mask",
+      "step": "air"
+    }
+  ]
+}

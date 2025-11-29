@@ -1,0 +1,15 @@
+{
+  "name": "cavernous:dungeon",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cavernous:undergrowth/the_monolith",
+        "projection": "rigid",
+        "processors": "cavernous:monolith"
+      }
+    }
+  ]
+}

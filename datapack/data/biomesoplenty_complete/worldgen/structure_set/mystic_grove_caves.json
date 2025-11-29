@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "biomesoplenty_complete:mystic_grove_caves",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1,
+    "exclusion_zone": {
+      "other_set": "biomesoplenty_complete:cave_blocker",
+      "chunk_count": 10
+    },
+    "spacing": 12,
+    "separation": 6
+  }
+}

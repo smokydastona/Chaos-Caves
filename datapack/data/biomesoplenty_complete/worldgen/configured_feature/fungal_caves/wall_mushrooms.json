@@ -1,0 +1,69 @@
+{
+  "type": "minecraft:random_boolean_selector",
+  "config": {
+    "feature_false": {
+      "feature": {
+        "type": "minecraft:disk",
+        "config": {
+          "state_provider": {
+            "fallback": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:brown_mushroom_block",
+                "Properties": {
+                  "down": "false"
+                }
+              }
+            },
+            "rules": []
+          },
+          "target": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          },
+          "radius": {
+            "type": "minecraft:uniform",
+            "value": {
+              "min_inclusive": 1,
+              "max_inclusive": 3
+            }
+          },
+          "half_height": 0
+        }
+      },
+      "placement": []
+    },
+    "feature_true": {
+      "feature": {
+        "type": "minecraft:disk",
+        "config": {
+          "state_provider": {
+            "fallback": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:red_mushroom_block",
+                "Properties": {
+                  "down": "false"
+                }
+              }
+            },
+            "rules": []
+          },
+          "target": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          },
+          "radius": {
+            "type": "minecraft:uniform",
+            "value": {
+              "min_inclusive": 1,
+              "max_inclusive": 3
+            }
+          },
+          "half_height": 0
+        }
+      },
+      "placement": []
+    }
+  }
+}
