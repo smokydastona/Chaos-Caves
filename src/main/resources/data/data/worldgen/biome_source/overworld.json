@@ -1,0 +1,689 @@
+{
+  "type": "minecraft:multi_noise",
+  "biomes": [
+    {
+      "biome": "minecraft:ocean",
+      "parameters": {
+        "temperature": [-1.0, 1.0],
+        "humidity": [-1.0, 1.0],
+        "continentalness": [-0.19, -0.11],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "minecraft:deep_ocean",
+      "parameters": {
+        "temperature": [-1.0, 1.0],
+        "humidity": [-1.0, 1.0],
+        "continentalness": [-1.0, -0.19],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:tropics",
+      "parameters": {
+        "temperature": [0.5, 1.0],
+        "humidity": [0.3, 1.0],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.78, -0.375],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:rainforest",
+      "parameters": {
+        "temperature": [0.4, 1.0],
+        "humidity": [0.5, 1.0],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:fungal_jungle",
+      "parameters": {
+        "temperature": [0.3, 1.0],
+        "humidity": [0.4, 1.0],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:bayou",
+      "parameters": {
+        "temperature": [0.2, 0.8],
+        "humidity": [0.6, 1.0],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-1.0, -0.78],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:marsh",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [0.5, 1.0],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-1.0, -0.78],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:wetland",
+      "parameters": {
+        "temperature": [0.1, 0.7],
+        "humidity": [0.4, 1.0],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.78, -0.375],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:redwood_forest",
+      "parameters": {
+        "temperature": [0.0, 0.5],
+        "humidity": [0.3, 0.8],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:coniferous_forest",
+      "parameters": {
+        "temperature": [-0.5, 0.3],
+        "humidity": [0.2, 0.8],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:maple_woods",
+      "parameters": {
+        "temperature": [-0.2, 0.4],
+        "humidity": [0.1, 0.7],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.05, 0.26],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:seasonal_forest",
+      "parameters": {
+        "temperature": [-0.1, 0.5],
+        "humidity": [0.0, 0.6],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.26, 0.4],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:woodland",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [-0.1, 0.5],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.4, 0.55],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:grassland",
+      "parameters": {
+        "temperature": [0.1, 0.7],
+        "humidity": [-0.2, 0.4],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.55, 1.0],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:prairie",
+      "parameters": {
+        "temperature": [0.2, 0.8],
+        "humidity": [-0.3, 0.3],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.05, 0.4],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:field",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [-0.4, 0.2],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.4, 0.55],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:pasture",
+      "parameters": {
+        "temperature": [-0.1, 0.5],
+        "humidity": [-0.5, 0.1],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.55, 1.0],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:lush_desert",
+      "parameters": {
+        "temperature": [0.5, 1.0],
+        "humidity": [-1.0, -0.1],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.78, -0.375],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:lush_savanna",
+      "parameters": {
+        "temperature": [0.6, 1.0],
+        "humidity": [-0.8, 0.2],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:scrubland",
+      "parameters": {
+        "temperature": [0.4, 1.0],
+        "humidity": [-1.0, -0.2],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:dryland",
+      "parameters": {
+        "temperature": [0.3, 1.0],
+        "humidity": [-1.0, -0.3],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.05, 0.26],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:wasteland",
+      "parameters": {
+        "temperature": [0.2, 1.0],
+        "humidity": [-1.0, -0.4],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.26, 0.4],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:cold_desert",
+      "parameters": {
+        "temperature": [-1.0, 0.1],
+        "humidity": [-1.0, -0.1],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.4, 0.55],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:tundra",
+      "parameters": {
+        "temperature": [-1.0, 0.0],
+        "humidity": [-0.8, 0.2],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.55, 1.0],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:snowy_coniferous_forest",
+      "parameters": {
+        "temperature": [-1.0, -0.1],
+        "humidity": [0.1, 0.8],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.78, -0.375],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:snowblossom_grove",
+      "parameters": {
+        "temperature": [-0.8, 0.1],
+        "humidity": [0.0, 0.7],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:snowy_maple_woods",
+      "parameters": {
+        "temperature": [-0.6, 0.2],
+        "humidity": [-0.1, 0.6],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:snowy_fir_clearing",
+      "parameters": {
+        "temperature": [-0.5, 0.3],
+        "humidity": [-0.2, 0.5],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.05, 0.26],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:highland",
+      "parameters": {
+        "temperature": [-0.2, 0.4],
+        "humidity": [-0.3, 0.4],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.26, 0.4],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:crag",
+      "parameters": {
+        "temperature": [-0.1, 0.5],
+        "humidity": [-0.4, 0.3],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.4, 0.55],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:jade_cliffs",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [-0.5, 0.2],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [0.55, 1.0],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:mystic_grove",
+      "parameters": {
+        "temperature": [0.1, 0.7],
+        "humidity": [0.2, 0.9],
+        "continentalness": [0.65, 1.0],
+        "erosion": [-1.0, -0.375],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:origin_valley",
+      "parameters": {
+        "temperature": [0.2, 0.8],
+        "humidity": [0.3, 1.0],
+        "continentalness": [0.65, 1.0],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:auroral_garden",
+      "parameters": {
+        "temperature": [-0.5, 0.3],
+        "humidity": [0.1, 0.8],
+        "continentalness": [0.65, 1.0],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:lavender_field",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [0.0, 0.7],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.05, 0.26],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:lavender_forest",
+      "parameters": {
+        "temperature": [-0.1, 0.5],
+        "humidity": [-0.1, 0.6],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.26, 0.4],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:orchard",
+      "parameters": {
+        "temperature": [0.1, 0.7],
+        "humidity": [-0.2, 0.5],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.4, 0.55],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:seasonal_orchard",
+      "parameters": {
+        "temperature": [0.2, 0.8],
+        "humidity": [-0.3, 0.4],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.55, 1.0],
+        "weirdness": [-1.0, -0.16],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:pumpkin_patch",
+      "parameters": {
+        "temperature": [0.3, 0.9],
+        "humidity": [-0.4, 0.3],
+        "continentalness": [0.65, 1.0],
+        "erosion": [-1.0, -0.375],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:clover_patch",
+      "parameters": {
+        "temperature": [0.4, 1.0],
+        "humidity": [-0.5, 0.2],
+        "continentalness": [0.65, 1.0],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:mediterranean_forest",
+      "parameters": {
+        "temperature": [0.5, 1.0],
+        "humidity": [-0.6, 0.1],
+        "continentalness": [0.65, 1.0],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:forested_field",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [-0.7, 0.0],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.05, 0.26],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:fir_clearing",
+      "parameters": {
+        "temperature": [-0.2, 0.4],
+        "humidity": [-0.8, -0.1],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.26, 0.4],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:old_growth_woodland",
+      "parameters": {
+        "temperature": [-0.3, 0.3],
+        "humidity": [-0.9, -0.2],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.4, 0.55],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:dead_forest",
+      "parameters": {
+        "temperature": [-0.4, 0.2],
+        "humidity": [-1.0, -0.3],
+        "continentalness": [0.65, 1.0],
+        "erosion": [0.55, 1.0],
+        "weirdness": [0.16, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:bog",
+      "parameters": {
+        "temperature": [-0.5, 0.1],
+        "humidity": [0.3, 1.0],
+        "continentalness": [0.2, 0.65],
+        "erosion": [-1.0, -0.78],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:moor",
+      "parameters": {
+        "temperature": [-0.3, 0.3],
+        "humidity": [0.1, 0.8],
+        "continentalness": [0.2, 0.65],
+        "erosion": [-0.78, -0.375],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:muskeg",
+      "parameters": {
+        "temperature": [-0.6, 0.0],
+        "humidity": [0.0, 0.7],
+        "continentalness": [0.2, 0.65],
+        "erosion": [-0.375, -0.2225],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:floodplain",
+      "parameters": {
+        "temperature": [-0.4, 0.2],
+        "humidity": [-0.2, 0.5],
+        "continentalness": [0.2, 0.65],
+        "erosion": [-0.2225, 0.05],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:shrubland",
+      "parameters": {
+        "temperature": [-0.2, 0.4],
+        "humidity": [-0.4, 0.3],
+        "continentalness": [0.2, 0.65],
+        "erosion": [0.05, 0.26],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:rocky_shrubland",
+      "parameters": {
+        "temperature": [-0.1, 0.5],
+        "humidity": [-0.6, 0.1],
+        "continentalness": [0.2, 0.65],
+        "erosion": [0.26, 0.4],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:rocky_rainforest",
+      "parameters": {
+        "temperature": [0.0, 0.6],
+        "humidity": [-0.8, -0.1],
+        "continentalness": [0.2, 0.65],
+        "erosion": [0.4, 0.55],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:undergrowth",
+      "parameters": {
+        "temperature": [0.1, 0.7],
+        "humidity": [-1.0, -0.3],
+        "continentalness": [0.2, 0.65],
+        "erosion": [0.55, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:dune_beach",
+      "parameters": {
+        "temperature": [0.5, 1.0],
+        "humidity": [-1.0, 0.0],
+        "continentalness": [-0.19, -0.05],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:volcanic_plains",
+      "parameters": {
+        "temperature": [0.8, 1.0],
+        "humidity": [-1.0, 0.2],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 1.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "biomesoplenty:volcano",
+      "parameters": {
+        "temperature": [0.9, 1.0],
+        "humidity": [-1.0, 0.1],
+        "continentalness": [-0.11, 1.0],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 1.5,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "minecraft:river",
+      "parameters": {
+        "temperature": [-1.0, 1.0],
+        "humidity": [-1.0, 1.0],
+        "continentalness": [-0.11, 0.65],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.375
+      }
+    }
+  ]
+}
