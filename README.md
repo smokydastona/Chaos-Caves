@@ -1,6 +1,6 @@
-# BoP Cave Compact Companion Mod
+# Fractured Lands
 
-A Forge server-side mod that enhances the BoP Cave Compact datapack with proper biome spawning and feature generation.
+A Forge server-side mod that creates enhanced cave worlds with proper biome spawning and feature generation.
 
 ## Features
 
@@ -21,7 +21,7 @@ To build:
 ./gradlew build
 ```
 
-The compiled mod will be in `build/libs/bop-cave-compact-companion-1.1.0.jar`
+The compiled mod will be in `build/libs/fractured-lands-1.0.0.jar`
 
 ## Installation
 
@@ -37,7 +37,7 @@ The compiled mod will be in `build/libs/bop-cave-compact-companion-1.1.0.jar`
 
 ## Configuration
 
-Config file: `world/serverconfig/bopcompanion-server.toml`
+Config file: `world/serverconfig/fracturedlands-server.toml`
 
 Key settings:
 - `ignore_light_conditions = true` - Features spawn in dark caves
@@ -53,3 +53,7 @@ Uses mixins to override:
 - TerraBlender surface rules for proper cave terrain generation
 
 Compatible with all biome mods - BiomesOPlenty, Terralith, Oh The Biomes You'll Go, etc.
+
+## What is Fractured Lands?
+
+Fractured Lands transforms your world into an expansive cave realm where all biomes spawn underground. Features, structures, and vegetation generate naturally in the caves, creating a unique underground survival experience.

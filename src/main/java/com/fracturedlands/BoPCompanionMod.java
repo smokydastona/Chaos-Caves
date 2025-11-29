@@ -1,8 +1,8 @@
-package com.bopcompanion;
+package com.fracturedlands;
 
-import com.bopcompanion.config.CompanionConfig;
-import com.bopcompanion.worldgen.CompanionSurfaceRules;
-import com.bopcompanion.worldgen.CompanionRegion;
+import com.fracturedlands.config.FracturedConfig;
+import com.fracturedlands.worldgen.FracturedSurfaceRules;
+import com.fracturedlands.worldgen.FracturedRegion;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,16 +16,16 @@ import org.slf4j.LoggerFactory;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
-@Mod(BoPCompanionMod.MODID)
-public class BoPCompanionMod {
-    public static final String MODID = "bopcompanion";
+@Mod(FracturedLandsMod.MODID)
+public class FracturedLandsMod {
+    public static final String MODID = "fracturedlands";
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
-    public BoPCompanionMod() {
+    public FracturedLandsMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         
         // Register config
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, CompanionConfig.SERVER_CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, FracturedConfig.SERVER_CONFIG);
         
         // Setup events
         modEventBus.addListener(this::commonSetup);
@@ -35,12 +35,12 @@ public class BoPCompanionMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             // Register TerraBlender integration
-            Regions.register(new CompanionRegion(new ResourceLocation(MODID, "overworld"), 2));
+            Regions.register(new FracturedRegion(new ResourceLocation(MODID, "overworld"), 2));
             
             // Register surface rules for proper cave world generation
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID, CompanionSurfaceRules.makeRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID, FracturedSurfaceRules.makeRules());
             
-            LOGGER.info("BoP Cave Compact Companion initialized - Enhanced biome spawning and structure generation enabled");
+            LOGGER.info("Fractured Lands initialized - Enhanced cave world generation enabled");
         });
     }
 }

@@ -1,6 +1,6 @@
-package com.bopcompanion.mixins;
+package com.fracturedlands.mixins;
 
-import com.bopcompanion.config.CompanionConfig;
+import com.fracturedlands.config.FracturedConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
@@ -22,7 +22,7 @@ public class BlockPredicateFilterMixin {
     
     @Inject(method = "getPositions", at = @At("HEAD"), cancellable = true)
     private void overrideLightChecks(PlacementContext context, RandomSource random, BlockPos pos, CallbackInfoReturnable<Stream<BlockPos>> cir) {
-        if (CompanionConfig.IGNORE_LIGHT_CONDITIONS.get() || CompanionConfig.IGNORE_SKY_ACCESS.get()) {
+        if (FracturedConfig.IGNORE_LIGHT_CONDITIONS.get() || FracturedConfig.IGNORE_SKY_ACCESS.get()) {
             // Bypass the predicate check and allow the feature to place
             cir.setReturnValue(Stream.of(pos));
         }

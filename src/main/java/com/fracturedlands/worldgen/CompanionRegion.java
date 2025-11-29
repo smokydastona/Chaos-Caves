@@ -1,4 +1,4 @@
-package com.bopcompanion.worldgen;
+package com.fracturedlands.worldgen;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
@@ -12,11 +12,11 @@ import terrablender.api.RegionType;
 import java.util.function.Consumer;
 
 /**
- * TerraBlender region for enhanced cave world generation
+ * TerraBlender region for Fractured Lands cave world generation
  * Ensures all biomes spawn correctly in cave environments
  */
-public class CompanionRegion extends Region {
-    public CompanionRegion(ResourceLocation name, int weight) {
+public class FracturedRegion extends Region {
+    public FracturedRegion(ResourceLocation name, int weight) {
         super(name, RegionType.OVERWORLD, weight);
     }
 

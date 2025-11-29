@@ -3,33 +3,33 @@ loaderVersion="[47,)"
 license="MIT"
 
 [[mods]]
-modId="bopcompanion"
+modId="fracturedlands"
 version="${file.jarVersion}"
-displayName="BoP Cave Compact Companion"
+displayName="Fractured Lands"
 description='''
-Server-side companion mod for BoP Cave Compact datapack.
-Enhances biome spawning, removes light/sky restrictions, and expands structure spawn ranges in cave worlds.
-Compatible with BiomesOPlenty and all biome mods.
+Transforms the overworld into an expansive underground cave realm.
+All biomes spawn naturally in caves with proper features, structures, and vegetation.
+Compatible with all biome mods - BiomesOPlenty, Terralith, Oh The Biomes You'll Go, etc.
 '''
 logoFile="logo.png"
-credits="Based on Chaos Caves architecture"
-authors="AI Assistant"
+credits="Inspired by cave compact datapacks"
+authors="smokydastona"
 
-[[dependencies.bopcompanion]]
+[[dependencies.fracturedlands]]
 modId="forge"
 mandatory=true
 versionRange="[47.2.0,)"
 ordering="NONE"
 side="SERVER"
 
-[[dependencies.bopcompanion]]
+[[dependencies.fracturedlands]]
 modId="minecraft"
 mandatory=true
 versionRange="[1.20.1,1.21)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.bopcompanion]]
+[[dependencies.fracturedlands]]
 modId="terrablender"
 mandatory=true
 versionRange="[3.0.1.4,)"

@@ -1,8 +1,8 @@
-package com.bopcompanion.config;
+package com.fracturedlands.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
-public class CompanionConfig {
+public class FracturedConfig {
     public static final ForgeConfigSpec SERVER_CONFIG;
     
     public static final ForgeConfigSpec.BooleanValue ENHANCE_BIOME_SPAWNING;
@@ -17,7 +17,7 @@ public class CompanionConfig {
     static {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
         
-        builder.comment("BoP Cave Compact Companion - Enhanced spawning and generation settings")
+        builder.comment("Fractured Lands - Cave world generation settings")
                .push("biome_enhancement");
         
         ENHANCE_BIOME_SPAWNING = builder

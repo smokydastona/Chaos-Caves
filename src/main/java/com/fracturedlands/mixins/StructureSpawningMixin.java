@@ -1,6 +1,6 @@
-package com.bopcompanion.mixins;
+package com.fracturedlands.mixins;
 
-import com.bopcompanion.config.CompanionConfig;
+import com.fracturedlands.config.FracturedConfig;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureSpawnOverride;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -17,7 +17,7 @@ public class StructureSpawningMixin {
     
     @ModifyVariable(method = "findValidGenerationPoint", at = @At("HEAD"), argsOnly = true)
     private Heightmap.Types expandHeightmapTypes(Heightmap.Types original) {
-        if (CompanionConfig.ENHANCE_BIOME_SPAWNING.get()) {
+        if (FracturedConfig.ENHANCE_BIOME_SPAWNING.get()) {
             // Use WORLD_SURFACE instead of more restrictive heightmaps
             // This allows structures to spawn at any solid surface in caves
             return Heightmap.Types.WORLD_SURFACE;

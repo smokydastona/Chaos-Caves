@@ -1,16 +1,16 @@
-package com.bopcompanion.worldgen;
+package com.fracturedlands.worldgen;
 
-import com.bopcompanion.config.CompanionConfig;
+import com.fracturedlands.config.FracturedConfig;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 
 /**
- * Surface rules for enhanced cave world generation
+ * Surface rules for Fractured Lands cave world generation
  * Creates proper terrain generation and ensures structures can spawn at varied heights
  */
-public class CompanionSurfaceRules {
+public class FracturedSurfaceRules {
     
     public static SurfaceRules.RuleSource makeRules() {
         return SurfaceRules.sequence(

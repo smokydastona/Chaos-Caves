@@ -5,9 +5,9 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '1.1.0'
-group = 'com.bopcompanion'
-archivesBaseName = 'bop-cave-compact-companion'
+version = '1.0.0'
+group = 'com.fracturedlands'
+archivesBaseName = 'fractured-lands'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -22,7 +22,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
             args '--nogui'
             mods {
-                bopcompanion {
+                fracturedlands {
                     source sourceSets.main
                 }
             }
@@ -57,12 +57,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title"     : "BoP Cave Compact Companion",
-            "Specification-Vendor"    : "BoPCompanion",
+            "Specification-Title"     : "Fractured Lands",
+            "Specification-Vendor"    : "FracturedLands",
             "Specification-Version"   : "1",
             "Implementation-Title"    : project.name,
             "Implementation-Version"  : project.jar.archiveVersion,
-            "Implementation-Vendor"   : "BoPCompanion",
+            "Implementation-Vendor"   : "FracturedLands",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
